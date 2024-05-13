@@ -7,7 +7,8 @@
 
 
 .container {
-    max-width: 600px;
+    max-height: 800px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
@@ -64,7 +65,7 @@
     font-weight: bold;
 }
 
-/* Style the instructions */
+
 .instructions {
     font-size: 14px;
     font-style: italic;

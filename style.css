@@ -1,0 +1,71 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the container */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the game name */
+.game-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style the next block box */
+.next-block {
+    margin-bottom: 20px;
+}
+
+.next-block-label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.next-block-value {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Style the score */
+.score {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Style the game board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    background-color: #ccc; /* Change this color to customize the game board background */
+    padding: 10px;
+}
+
+/* Style the individual tiles on the game board */
+.tile {
+    width: 100%;
+    height: 100%;
+    background-color: #eee; /* Change this color to customize the tile background */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style the instructions */
+.instructions {
+    font-size: 14px;
+    font-style: italic;
+}

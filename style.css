@@ -1,10 +1,17 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
 .container {
     max-height: 800px;
@@ -14,28 +21,11 @@
     text-align: center;
 }
 
-
 .game-name {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
-
-
-.next-block {
-    margin-bottom: 20px;
-}
-
-.next-block-label {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.next-block-value {
-    font-size: 20px;
-    font-weight: bold;
-}
-
 
 .score {
     font-size: 18px;
@@ -43,28 +33,39 @@
     margin-bottom: 20px;
 }
 
-
 .game-board {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
     grid-gap: 10px;
-    background-color: #ccc; 
+    background-color:gray; 
     padding: 10px;
+    justify-content: center;
 }
 
-
 .tile {
-    width: 100%;
-    height: 100%;
-    background-color: #eee; 
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: black; 
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-tile {
+    width: 80%;
+    height: 80%;
+    background-color: darkgreen; 
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     font-weight: bold;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
 }
-
 
 .instructions {
     font-size: 14px;

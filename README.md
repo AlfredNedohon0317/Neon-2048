@@ -20,3 +20,9 @@ Development Steps:
 First, I'll set up the basic HTML structure to define the game board and UI elements. Next, I'll use CSS to style the game board and UI elements, making them visually appealing and easy to navigate. Then, I'll dive into JavaScript to implement the game logic, including functions for generating new tiles, moving tiles, merging tiles, and checking for game over conditions. After that, I'll add event listeners in JavaScript to enable user interaction, such as using arrow keys or swipes to move tiles. Finally, I'll thoroughly test the game to ensure it functions smoothly, fixing any bugs or issues that arise along the way.
 
 Conclusion: I'm really looking forward to bringing this project to life! Building the 2048 game will not only be a fun challenge but also a great opportunity to further develop my skills in web development and game design.
+
+
+
+
+
+THIS GAME WAS CREATED BY ALFRED NEDOHON AND AN OVERSIGHT OF CHAT GPT 3.5 FOR DEBUGGING 

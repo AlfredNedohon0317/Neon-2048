@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,7 +11,11 @@ body {
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: black;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
 }
+
 
 .container {
     max-height: 800px;
@@ -57,7 +61,7 @@ body {
 .inner-tile {
     width: 80%;
     height: 80%;
-    background-color: darkgreen; 
+    background-image:radial-gradient(black,#00ff00);
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -70,4 +74,98 @@ body {
 .instructions {
     font-size: 14px;
     font-style: italic;
+} */
+
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+.container {
+    max-height: 800px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.game-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+    animation: neon 1s infinite alternate;
+}
+
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 60px #ff0000, 0 0 70px #ff0000;
+    }
+    100% {
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+    }
+}
+
+.score {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+    animation: neon 1s infinite alternate;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    grid-gap: 10px;
+    background-color: gray; 
+    padding: 10px;
+    justify-content: center;
+}
+
+.tile {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: black; 
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-tile {
+    width: 80%;
+    height: 80%;
+    background-image: radial-gradient(black, #00ff00);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    animation: neon 1s infinite alternate;
+}
+
+.instructions {
+    font-size: 14px;
+    font-style: italic;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+    animation: neon 1s infinite alternate;
 }

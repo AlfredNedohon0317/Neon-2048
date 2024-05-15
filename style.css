@@ -1,8 +1,9 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body {
     display: flex;
@@ -13,7 +14,15 @@ body {
     font-family: Arial, sans-serif;
     background-color: black;
     color: #00ff00;
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+    text-shadow: 
+        0 0 10px #ff00ff, 
+        0 0 20px #ff00ff, 
+        0 0 30px #ff00ff, 
+        0 0 40px #ff00ff, 
+        0 0 50px #ff00ff, 
+        0 0 60px #ff00ff, 
+        0 0 70px #ff00ff;
+    animation: neonRainbow 5s infinite linear;
 }
 
 
@@ -25,150 +34,152 @@ body {
     text-align: center;
 }
 
+
 .game-name {
-    font-size: 24px;
+    font-size: 48px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #00ff00;
+    animation: neonRainbow 5s infinite linear;
 }
 
+
 .score {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
+    color: #00ff00;
+    animation: neonRainbow 5s infinite linear;
 }
+
 
 .game-board {
     display: grid;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(4, 100px);
     grid-gap: 10px;
-    background-color:gray; 
+    background-color: rgb(3, 240, 248);
     padding: 10px;
     justify-content: center;
 }
+
 
 .tile {
     position: relative;
     width: 100px;
     height: 100px;
-    background-color: black; 
+    background-color: black;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .inner-tile {
     width: 80%;
     height: 80%;
-    background-image:radial-gradient(black,#00ff00);
+    background-image: radial-gradient(black, #000000);
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     font-weight: bold;
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+    color: #c7f0c7;
+    text-shadow: 
+        0 0 10px #ff0000, 
+        0 0 20px #e5ff00, 
+        0 0 30px #00ff00, 
+        0 0 40px #00f7ff, 
+        0 0 50px #c300ff, 
+        0 0 60px #ea00ff, 
+        0 0 70px #ff0062;
+    animation: pulseNeon 2s infinite ease-in-out, neonRainbow 5s infinite linear;
 }
+
 
 .instructions {
     font-size: 14px;
     font-style: italic;
-} */
-
-
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    color: #00ff00;
+    animation: neonRainbow 5s infinite linear;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: rgb(0, 255, 255);
-}
 
-.container {
-    max-height: 800px;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.game-name {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #00f7ff;
-    text-shadow: 0 0 10px #00ffff, 0 0 20px #00f7ff, 0 0 30px #00e1ff, 0 0 40px #00e1ff, 0 0 50px #00e1ff, 0 0 60px #00f7ff, 0 0 70px #00e1ff;
-    animation: neon 1s infinite alternate;
-}
-
-@keyframes neon {
+@keyframes neonRainbow {
     0% {
-        text-shadow: 0 0 10px #ff0000, 0 0 20px #f86931, 0 0 30px #e5ff00, 0 0 40px #00ff37, 0 0 50px #00e1ff, 0 0 60px #4400ff, 0 0 70px #ea00ff;
+        text-shadow: 
+            0 0 10px #ff0000, 
+            0 0 20px #ff0000, 
+            0 0 30px #ff0000, 
+            0 0 40px #ff0000, 
+            0 0 50px #ff0000, 
+            0 0 60px #ff0000, 
+            0 0 70px #ff0000;
+    }
+    25% {
+        text-shadow: 
+            0 0 10px #00ff00, 
+            0 0 20px #00ff00, 
+            0 0 30px #00ff00, 
+            0 0 40px #00ff00, 
+            0 0 50px #00ff00, 
+            0 0 60px #00ff00, 
+            0 0 70px #00ff00;
+    }
+    50% {
+        text-shadow: 
+            0 0 10px #00d9ff, 
+            0 0 20px #00d9ff, 
+            0 0 30px #00d9ff, 
+            0 0 40px #00d9ff, 
+            0 0 50px #00d9ff, 
+            0 0 60px #00d9ff, 
+            0 0 70px #00d9ff;
+    }
+    75% {
+        text-shadow: 
+            0 0 10px #ffff00, 
+            0 0 20px #ffff00, 
+            0 0 30px #ffff00, 
+            0 0 40px #ffff00, 
+            0 0 50px #ffff00, 
+            0 0 60px #ffff00, 
+            0 0 70px #ffff00;
     }
     100% {
-        text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
+        text-shadow: 
+            0 0 10px #ff00ff, 
+            0 0 20px #ff00ff, 
+            0 0 30px #ff00ff, 
+            0 0 40px #ff00ff, 
+            0 0 50px #ff00ff, 
+            0 0 60px #ff00ff, 
+            0 0 70px #ff00ff;
     }
 }
 
-.score {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #00ff00;
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
-    animation: neon 1s infinite alternate;
+
+@keyframes pulseNeon {
+    0%, 100% {
+        text-shadow: 
+            0 0 10px #00ff00, 
+            0 0 20px #00ff00, 
+            0 0 30px #00ff00, 
+            0 0 40px #00ff00, 
+            0 0 50px #00ff00, 
+            0 0 60px #00ff00, 
+            0 0 70px #00ff00;
+    }
+    50% {
+        text-shadow: 
+            0 0 20px #00ff00, 
+            0 0 30px #00ff00, 
+            0 0 40px #00ff00, 
+            0 0 50px #00ff00, 
+            0 0 60px #00ff00, 
+            0 0 70px #00ff00, 
+            0 0 80px #00ff00;
+    }
 }
-
-.game-board {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(4, 100px);
-    grid-gap: 10px;
-    background-color: gray; 
-    padding: 10px;
-    justify-content: center;
-}
-
-.tile {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    background-color: black; 
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.inner-tile {
-    width: 80%;
-    height: 80%;
-    background-image: radial-gradient(black, #00ff00);
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    animation: neon 1s infinite alternate;
-}
-
-.instructions {
-    font-size: 14px;
-    font-style: italic;
-    color: #00ff00;
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00;
-    animation: neon 1s infinite alternate;
-}
-
-

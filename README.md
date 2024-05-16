@@ -25,4 +25,6 @@ Conclusion: I'm really looking forward to bringing this project to life! Buildin
 
 
 
-THIS GAME WAS CREATED BY ALFRED NEDOHON AND AN OVERSIGHT OF CHAT GPT 3.5 FOR DEBUGGING 
+THIS GAME WAS CREATED BY ALFRED NEDOHON AND AN OVERSIGHT OF CHAT GPT 3.5 FOR DEBUGGING
+
+https://neon-2048.surge.sh/

@@ -3,6 +3,7 @@ const EMPTY_CELL = 0;
 
 let gameBoard = [];
 let score = 0;
+let highScore = localStorage.getItem('highScore') ? parseInt(localStorage.getItem('highScore')) : 0;
 
 function initializeGameBoard() {
     gameBoard = Array.from({ length: GRID_SIZE }, () => Array.from({ length: GRID_SIZE }, () => EMPTY_CELL));
@@ -49,6 +50,11 @@ function updateGameBoardDisplay() {
 
 function updateScoreDisplay(score) {
     document.getElementById('score').textContent = score;
+    updateHighScoreDisplay(highScore);
+}
+
+function updateHighScoreDisplay(highScore) {
+    document.getElementById('high-score').textContent = highScore;
 }
 
 function handleKeyPress(event) {
@@ -162,6 +168,7 @@ function moveTiles(direction) {
         generateRandomTile();
         updateGameBoardDisplay();
         updateScoreDisplay(score);
+        updateHighScore();
         if (checkGameOver()) {
             showGameOverMessage();
         }
@@ -191,6 +198,14 @@ function checkGameOver() {
     return true;
 }
 
+function updateHighScore() {
+    if (score > highScore) {
+        highScore = score;
+        localStorage.setItem('highScore', highScore);
+        updateHighScoreDisplay(highScore);
+    }
+}
+
 function startGame() {
     initializeGameBoard();
     generateRandomTile();
@@ -198,6 +213,7 @@ function startGame() {
     updateGameBoardDisplay();
     score = 0;
     updateScoreDisplay(score);
+    updateHighScoreDisplay(highScore);
     document.addEventListener('keydown', handleKeyPress);
 
     const restartButton = document.getElementById('restart-button');
